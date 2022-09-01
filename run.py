@@ -5,11 +5,12 @@ from send_email import send_email
 
 
 pub_list=check_pub_list()
+time.sleep(5.2)
 while(1):
     
     new_pub_list=check_pub_list()
     
-    if set(new_pub_list).difference(set(pub_list))==set():
+    if set(new_pub_list).difference(set(pub_list))!=set():
         pass
     else:
         send_email()
